@@ -11,7 +11,15 @@ public class Polideportivo implements InstalacionDeportiva, Edificio{
 	}
 	@Override
 	public int getTipoDeInstalacion() {
-		
+		int tipo = 0;
+		switch(nombre) {
+		case "futbol"-> tipo = 1;
+		case "tenis" -> tipo = 2;
+		case "padel" -> tipo = 3;
+		case "baloncesto" -> tipo = 4;
+		default-> tipo = 0;
+		}
+		return tipo;
 	}
 	@Override
 	public double getSuperficieEdificio() {
